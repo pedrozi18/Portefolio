@@ -2,10 +2,10 @@
 // Typing Effect
 // ==================== 
 const typingTexts = [
+    "Software Developer",
     "Frontend Developer",
     "UI/UX Enthusiast",
-    "Problem Solver",
-    "Creative Designer"
+    "Problem Solver"
 ];
 
 let textIndex = 0;
