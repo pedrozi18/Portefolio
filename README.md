@@ -78,11 +78,18 @@ Portefolio/
 
 ### Update Personal Information
 Edit `index.html`:
-- Line 34: Change "Your Name"
+- Line 39: Change "Pedro Lourenço" to your name
+- Lines 48-52: Update hero buttons (including CV download)
 - Lines 53-56: Update social media links
 - Lines 95-172: Update skills
 - Lines 179-293: Update projects
 - Lines 329-353: Update contact information
+
+### Add Your CV
+1. Place your CV PDF file in the root directory
+2. Name it `cv.pdf`
+3. The "Download CV" button will automatically link to it
+4. The file will download as "Pedro_Lourenco_CV.pdf" (can be customized in `index.html` line 50)
 
 ### Change Colors
 Edit CSS variables in `styles.css`:
