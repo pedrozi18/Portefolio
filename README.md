@@ -1,10 +1,10 @@
 # Modern Portfolio Website 🚀
 
-A stunning, responsive portfolio website built with HTML, CSS, and JavaScript. Features a modern dark mode design with darker green and beige accents and glassmorphism effects.
+A stunning, responsive portfolio website built with HTML, CSS, and JavaScript. Features a modern light theme with grayish white background, darker green and beige accents, and glassmorphism effects.
 
 ## ✨ Features
 
-- **Modern Dark Mode Design** - Sleek dark theme with darker green (#2d5016) and beige (#d4c5a9) accents
+- **Modern Light Theme Design** - Clean light theme with grayish white background (#e8e9eb) and darker green (#2d5016) and beige (#d4c5a9) accents
 - **Glassmorphism Effects** - Beautiful frosted glass effects on cards and sections
 - **Sticky Navigation** - Fixed navbar with smooth scroll and active link highlighting
 - **Hero Section** - Eye-catching introduction with typing effect animation
@@ -20,7 +20,7 @@ A stunning, responsive portfolio website built with HTML, CSS, and JavaScript. F
 
 ## 🎨 Design Features
 
-- **Color Scheme**: Deep navy background (#0a0e27) with darker green (#2d5016) and beige (#d4c5a9) accents
+- **Color Scheme**: Grayish white background (#e8e9eb) with darker green (#2d5016) and beige (#d4c5a9) accents
 - **Typography**: Clean, modern sans-serif fonts
 - **Layout**: CSS Grid and Flexbox for responsive layouts
 - **Effects**: Smooth transitions, hover animations, and scroll effects
@@ -90,8 +90,8 @@ Edit CSS variables in `styles.css`:
 :root {
     --neon-blue: #2d5016;        /* Dark green primary accent */
     --beige-accent: #d4c5a9;     /* Beige secondary accent */
-    --bg-primary: #0a0e27;       /* Main background */
-    --bg-secondary: #151932;     /* Section backgrounds */
+    --bg-primary: #e8e9eb;       /* Grayish white background */
+    --bg-secondary: #f4f5f6;     /* Light section backgrounds */
 }
 ```
 
