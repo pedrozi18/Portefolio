@@ -6,6 +6,7 @@
     --bg-primary: #e8e9eb;
     --bg-secondary: #f4f5f6;
     --bg-tertiary: #d8d9db;
+    --bg-white: #ffffff;
     
     /* Dark Green and Beige Accents */
     --neon-blue: #2d5016;
@@ -79,7 +80,7 @@ body::before {
 
 ::selection {
     background: var(--neon-blue);
-    color: #ffffff;
+    color: var(--bg-white);
 }
 
 /* ==================== 
@@ -258,7 +259,7 @@ body::before {
 
 .btn-primary {
     background: var(--neon-blue);
-    color: #ffffff;
+    color: var(--bg-white);
     box-shadow: var(--neon-glow);
 }
 
@@ -276,7 +277,7 @@ body::before {
 
 .btn-secondary:hover {
     background: var(--neon-blue);
-    color: #ffffff;
+    color: var(--bg-white);
     box-shadow: var(--neon-glow);
 }
 
@@ -306,7 +307,7 @@ body::before {
 
 .social-links a:hover {
     background: var(--neon-blue);
-    color: #ffffff;
+    color: var(--bg-white);
     box-shadow: var(--neon-glow);
     transform: translateY(-5px);
 }
@@ -534,7 +535,7 @@ body::before {
 }
 
 .project-link:hover {
-    background: #ffffff;
+    background: var(--bg-white);
     transform: scale(1.1);
 }
 
@@ -676,7 +677,7 @@ body::before {
     align-items: center;
     justify-content: center;
     background: var(--neon-blue);
-    color: #ffffff;
+    color: var(--bg-white);
     border-radius: 50%;
     font-size: 1.2rem;
     flex-shrink: 0;
