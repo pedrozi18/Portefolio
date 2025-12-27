@@ -2,6 +2,16 @@
 
 This guide will walk you through deploying your portfolio to GitHub Pages step by step.
 
+## 🔍 Quick Troubleshooting
+
+**Is your website not working?** Check these first:
+1. ✅ Verify GitHub Pages is enabled (Settings → Pages)
+2. ✅ Confirm correct branch is selected (`copilot/create-responsive-portfolio`)
+3. ✅ Wait 2-5 minutes after any changes for GitHub to rebuild
+4. ✅ Check Actions tab for deployment status
+5. ✅ Ensure `.nojekyll` file exists in root directory
+6. ✅ Clear browser cache and try incognito mode
+
 ## Prerequisites
 - A GitHub account
 - Your portfolio code in a GitHub repository
@@ -43,15 +53,22 @@ https://pedrozi18.github.io/Portefolio/
 ## Common Issues and Solutions
 
 ### Issue 1: 404 Page Not Found
-**Solution**: Make sure your `index.html` is in the root directory (not in a subfolder)
+**Solution**: 
+- Make sure your `index.html` is in the root directory (not in a subfolder)
+- Verify you selected the correct branch in GitHub Pages settings
+- Wait 2-3 minutes after configuration for GitHub to build the site
+- Check that your branch name is correct (e.g., `copilot/create-responsive-portfolio`)
 
 ### Issue 2: CSS/JS Not Loading
-**Solution**: Check that your file paths in `index.html` are correct:
+**Solution**: 
+- Check that your file paths in `index.html` are correct and relative (not absolute):
 ```html
 <link rel="stylesheet" href="styles.css">
 <script src="content.js"></script>
 <script src="script.js"></script>
 ```
+- Ensure `.nojekyll` file exists in root (this prevents Jekyll from processing files)
+- Check browser console (F12) for specific error messages
 
 ### Issue 3: CV Download Not Working
 **Solution**: Make sure `cv.pdf` is in the root directory and committed to your repository
@@ -59,8 +76,25 @@ https://pedrozi18.github.io/Portefolio/
 ### Issue 4: Changes Not Showing
 **Solution**: 
 1. Clear your browser cache (Ctrl+F5 or Cmd+Shift+R)
-2. Wait a few minutes for GitHub Pages to rebuild
-3. Check the "Actions" tab to see if the deployment completed
+2. Wait 2-5 minutes for GitHub Pages to rebuild
+3. Check the "Actions" tab to see if the deployment completed successfully
+4. Try accessing in incognito/private browsing mode
+
+### Issue 5: Website Not Deploying at All
+**Solution**:
+1. Go to your repository "Actions" tab
+2. Look for "pages build and deployment" workflow
+3. Check if there are any errors
+4. Make sure GitHub Pages is enabled in Settings → Pages
+5. Verify your repository is public (or you have GitHub Pro for private repos)
+6. Ensure `.nojekyll` file exists in the root directory
+
+### Issue 6: Blank Page or JavaScript Errors
+**Solution**:
+1. Check browser console for errors (Press F12 → Console tab)
+2. Verify all three files load correctly: `content.js`, `script.js`, and `styles.css`
+3. Make sure `content.js` loads BEFORE `script.js` in your HTML
+4. Test locally by opening `index.html` in your browser
 
 ## Updating Your Portfolio
 
