@@ -1,21 +1,124 @@
 // ==================== 
+// Load Content from content.js
+// ==================== 
+function loadPortfolioContent() {
+    // Load personal info
+    document.querySelector('.gradient-text').textContent = portfolioContent.personal.name;
+    document.querySelector('.hero-description').textContent = portfolioContent.personal.description;
+    document.querySelector('.profile-img').src = portfolioContent.personal.profileImage;
+    document.querySelector('.profile-img').alt = portfolioContent.personal.name;
+    
+    // Update CV download
+    const cvLink = document.querySelector('a[download]');
+    cvLink.href = portfolioContent.personal.cvFile;
+    cvLink.download = portfolioContent.personal.cvDownloadName;
+    
+    // Load social links
+    document.querySelector('.social-links a[aria-label="GitHub"]').href = portfolioContent.social.github;
+    document.querySelector('.social-links a[aria-label="LinkedIn"]').href = portfolioContent.social.linkedin;
+    document.querySelector('.social-links a[aria-label="Twitter"]').href = portfolioContent.social.twitter;
+    
+    // Load about section
+    const aboutText = document.querySelector('.about-text');
+    aboutText.innerHTML = portfolioContent.about.paragraphs.map(p => `<p>${p}</p>`).join('');
+    
+    // Load skills
+    loadSkills();
+    
+    // Load projects
+    loadProjects();
+    
+    // Load contact info
+    loadContactInfo();
+    
+    // Update footer
+    document.querySelector('.footer-content p').textContent = `© ${portfolioContent.footer.year} ${portfolioContent.footer.text}`;
+    
+    // Start typing effect with content from content.js
+    startTypingEffect();
+}
+
+function loadSkills() {
+    const skillsGrid = document.querySelector('.skills-grid');
+    skillsGrid.innerHTML = '';
+    
+    portfolioContent.skills.forEach(skill => {
+        const skillCard = document.createElement('div');
+        skillCard.className = 'skill-card glass';
+        skillCard.innerHTML = `
+            <div class="skill-icon">
+                <i class="${skill.icon}"></i>
+            </div>
+            <h3>${skill.name}</h3>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: ${skill.level}%"></div>
+            </div>
+            <span class="skill-percentage">${skill.level}%</span>
+        `;
+        skillsGrid.appendChild(skillCard);
+    });
+}
+
+function loadProjects() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    projectsGrid.innerHTML = '';
+    
+    portfolioContent.projects.forEach(project => {
+        const projectCard = document.createElement('article');
+        projectCard.className = 'project-card glass';
+        projectCard.innerHTML = `
+            <div class="project-image">
+                <img src="${project.image}" alt="${project.title}">
+                <div class="project-overlay">
+                    <a href="${project.demoLink}" class="project-link" aria-label="View Demo">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="${project.githubLink}" class="project-link" aria-label="View Code">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+            </div>
+        `;
+        projectsGrid.appendChild(projectCard);
+    });
+}
+
+function loadContactInfo() {
+    const contactSubtitle = document.querySelector('.contact-subtitle');
+    if (contactSubtitle) {
+        contactSubtitle.textContent = portfolioContent.contact.subtitle;
+    }
+    
+    const contactInfoItems = document.querySelectorAll('.contact-info-item');
+    if (contactInfoItems.length >= 3) {
+        contactInfoItems[0].querySelector('p').textContent = portfolioContent.contact.email;
+        contactInfoItems[1].querySelector('p').textContent = portfolioContent.contact.location;
+        contactInfoItems[2].querySelector('p').textContent = portfolioContent.contact.phone;
+    }
+}
+
+// ==================== 
 // Typing Effect
 // ==================== 
-const typingTexts = [
-    "Software Developer",
-    "Frontend Developer",
-    "UI/UX Enthusiast",
-    "Problem Solver"
-];
-
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 let typingDelay = 200;
 
+function startTypingEffect() {
+    typeEffect();
+}
+
 function typeEffect() {
     const typingElement = document.getElementById('typingText');
-    const currentText = typingTexts[textIndex];
+    const currentText = portfolioContent.typingTexts[textIndex];
     
     if (!isDeleting) {
         // Typing
@@ -36,7 +139,7 @@ function typeEffect() {
         
         if (charIndex === 0) {
             isDeleting = false;
-            textIndex = (textIndex + 1) % typingTexts.length;
+            textIndex = (textIndex + 1) % portfolioContent.typingTexts.length;
             typingDelay = 500;
         } else {
             typingDelay = 50;
@@ -274,8 +377,8 @@ function initParallax() {
 // Initialize All Functions
 // ==================== 
 document.addEventListener('DOMContentLoaded', () => {
-    // Start typing effect
-    typeEffect();
+    // Load portfolio content first
+    loadPortfolioContent();
     
     // Initialize navigation
     initMobileNav();
