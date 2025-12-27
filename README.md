@@ -1,15 +1,15 @@
 # Modern Portfolio Website 🚀
 
-A stunning, responsive portfolio website built with HTML, CSS, and JavaScript. Features a modern dark mode design with neon blue accents and glassmorphism effects.
+A stunning, responsive portfolio website built with HTML, CSS, and JavaScript. Features a modern dark mode design with darker green and beige accents and glassmorphism effects.
 
 ## ✨ Features
 
-- **Modern Dark Mode Design** - Sleek dark theme with neon blue (#00d4ff) accents
+- **Modern Dark Mode Design** - Sleek dark theme with darker green (#2d5016) and beige (#d4c5a9) accents
 - **Glassmorphism Effects** - Beautiful frosted glass effects on cards and sections
 - **Sticky Navigation** - Fixed navbar with smooth scroll and active link highlighting
 - **Hero Section** - Eye-catching introduction with typing effect animation
 - **Animated Typing Text** - Dynamic text that cycles through multiple roles
-- **Image Glow Effect** - Pulsing neon glow around profile image
+- **Image Glow Effect** - Pulsing green glow around profile image
 - **Skills Section** - Showcase your technologies with animated progress bars
 - **Project Grid** - Display your work with hover animations and overlay effects
 - **Contact Form** - Functional contact section with glassmorphism styling
@@ -20,7 +20,7 @@ A stunning, responsive portfolio website built with HTML, CSS, and JavaScript. F
 
 ## 🎨 Design Features
 
-- **Color Scheme**: Deep navy background (#0a0e27) with neon blue accents
+- **Color Scheme**: Deep navy background (#0a0e27) with darker green (#2d5016) and beige (#d4c5a9) accents
 - **Typography**: Clean, modern sans-serif fonts
 - **Layout**: CSS Grid and Flexbox for responsive layouts
 - **Effects**: Smooth transitions, hover animations, and scroll effects
@@ -88,7 +88,8 @@ Edit `index.html`:
 Edit CSS variables in `styles.css`:
 ```css
 :root {
-    --neon-blue: #00d4ff;        /* Primary accent color */
+    --neon-blue: #2d5016;        /* Dark green primary accent */
+    --beige-accent: #d4c5a9;     /* Beige secondary accent */
     --bg-primary: #0a0e27;       /* Main background */
     --bg-secondary: #151932;     /* Section backgrounds */
 }
