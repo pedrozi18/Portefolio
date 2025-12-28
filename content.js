@@ -7,7 +7,7 @@ const portfolioContent = {
         name: "Pedro Lourenço",
         title: "Software Developer",
         description: "Building robust and scalable software solutions with clean, efficient code",
-        profileImage: "https://via.placeholder.com/400",
+        profileImage: "profile.png",
         cvFile: "cv.pdf",
         cvDownloadName: "Pedro_Lourenco_CV.pdf"
     },
