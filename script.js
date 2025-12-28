@@ -14,9 +14,7 @@ function loadPortfolioContent() {
     cvLink.download = portfolioContent.personal.cvDownloadName;
     
     // Load social links
-    document.querySelector('.social-links a[aria-label="GitHub"]').href = portfolioContent.social.github;
     document.querySelector('.social-links a[aria-label="LinkedIn"]').href = portfolioContent.social.linkedin;
-    document.querySelector('.social-links a[aria-label="Twitter"]').href = portfolioContent.social.twitter;
     
     // Load about section
     const aboutText = document.querySelector('.about-text');
