@@ -38,34 +38,19 @@ const portfolioContent = {
     // Skills
     skills: [
         {
-            name: "HTML5",
-            icon: "fab fa-html5",
-            level: 95
-        },
-        {
-            name: "CSS3",
-            icon: "fab fa-css3-alt",
+            name: "Java",
+            icon: "fab fa-java",
             level: 90
         },
         {
-            name: "JavaScript",
-            icon: "fab fa-js",
+            name: "C++",
+            icon: "fas fa-code",
             level: 85
         },
         {
-            name: "React",
-            icon: "fab fa-react",
-            level: 80
-        },
-        {
-            name: "Node.js",
-            icon: "fab fa-node",
-            level: 75
-        },
-        {
-            name: "Git",
-            icon: "fab fa-git-alt",
-            level: 85
+            name: "Python",
+            icon: "fab fa-python",
+            level: 95
         }
     ],
 
