@@ -6,7 +6,7 @@ const portfolioContent = {
     personal: {
         name: "Pedro Lourenço",
         title: "Software Developer",
-        description: "Crafting beautiful, functional, and user-friendly web experiences",
+        description: "Building robust and scalable software solutions with clean, efficient code",
         profileImage: "https://via.placeholder.com/400",
         cvFile: "cv.pdf",
         cvDownloadName: "Pedro_Lourenco_CV.pdf"
@@ -16,7 +16,6 @@ const portfolioContent = {
     typingTexts: [
         "Software Developer",
         "Frontend Developer",
-        "UI/UX Enthusiast",
         "Problem Solver"
     ],
 
