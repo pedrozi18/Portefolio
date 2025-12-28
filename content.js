@@ -27,8 +27,8 @@ const portfolioContent = {
     // About Section
     about: {
         paragraphs: [
-            "I'm a passionate web developer with expertise in creating modern, responsive, and user-friendly websites. I love turning complex problems into simple, beautiful, and intuitive designs.",
-            "With a strong foundation in frontend technologies and a keen eye for design, I strive to create digital experiences that not only look great but also provide exceptional user experience."
+            "I'm an aspiring web developer passionate about creating responsive and accessible websites. I love exploring new ways to turn problems into clean, functional, and intuitive interfaces.",
+            "While building my foundation in frontend technologies, I strive to develop digital experiences that provide a good user experience, always looking to expand my knowledge and improve my craft."
         ]
     },
 
