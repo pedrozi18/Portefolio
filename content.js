@@ -69,41 +69,19 @@ const portfolioContent = {
         }
     ],
 
-    // Projects
-    projects: [
-        {
-            title: "E-Commerce Platform",
-            description: "A modern e-commerce solution built with React and Node.js, featuring real-time inventory management.",
-            image: "https://via.placeholder.com/600x400",
-            tags: ["React", "Node.js", "MongoDB"],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            title: "Task Management App",
-            description: "A collaborative task management application with drag-and-drop functionality and real-time updates.",
-            image: "https://via.placeholder.com/600x400",
-            tags: ["Vue.js", "Firebase", "Tailwind"],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            title: "Weather Dashboard",
-            description: "An interactive weather dashboard with detailed forecasts, maps, and historical data visualization.",
-            image: "https://via.placeholder.com/600x400",
-            tags: ["JavaScript", "API", "Chart.js"],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            title: "Portfolio Website",
-            description: "A modern, responsive portfolio website with smooth animations and dark mode support.",
-            image: "https://via.placeholder.com/600x400",
-            tags: ["HTML", "CSS", "JavaScript"],
-            demoLink: "#",
-            githubLink: "#"
-        }
-    ],
+    // Featured Video (YouTube)
+    featuredVideo: {
+        // To add your YouTube video:
+        // 1. Go to your YouTube video
+        // 2. Click "Share" button
+        // 3. Copy the video ID (the part after "watch?v=" or "youtu.be/")
+        // 4. Paste it below
+        // Example: If URL is "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        // Then videoId is "dQw4w9WgXcQ"
+        youtubeVideoId: "", // Leave empty for now, add your video ID here later
+        title: "My Featured Video",
+        description: "Add your video description here"
+    },
 
     // Contact Information
     contact: {

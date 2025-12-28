@@ -116,40 +116,37 @@ skills: [
 }
 ```
 
-### 6. Projects
+### 6. Featured Video
 
-Update your portfolio projects:
+Add your YouTube video to the portfolio:
 
 ```javascript
-projects: [
-    {
-        title: "Project Name",
-        description: "Brief description of the project...",
-        image: "https://...",              // Project screenshot URL
-        tags: ["React", "Node.js", "MongoDB"], // Technologies used
-        demoLink: "https://demo-url.com",  // Live demo URL
-        githubLink: "https://github.com/..." // GitHub repo URL
-    },
-    // Add more projects...
-]
+featuredVideo: {
+    youtubeVideoId: "dQw4w9WgXcQ",     // Your YouTube video ID
+    title: "My Featured Video",
+    description: "Description of your video"
+}
+```
+
+**How to get your YouTube Video ID:**
+1. Go to your YouTube video
+2. Look at the URL - it will be like: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+3. Copy the part after `v=` (in this example: `dQw4w9WgXcQ`)
+4. Paste it as the `youtubeVideoId` value
+
+**Example:**
+```javascript
+featuredVideo: {
+    youtubeVideoId: "abc123XYZ",
+    title: "My Portfolio Showcase",
+    description: "Watch my latest project demonstration"
+}
 ```
 
 **Tips:**
-- Use high-quality project screenshots
-- Keep descriptions brief but informative
-- Use `#` for links you don't have yet
-
-**Example - Adding a New Project:**
-```javascript
-{
-    title: "My Awesome App",
-    description: "A mobile-first web application for task management",
-    image: "images/my-app-screenshot.png",
-    tags: ["Vue.js", "Firebase", "Tailwind CSS"],
-    demoLink: "https://my-app.com",
-    githubLink: "https://github.com/yourusername/my-app"
-}
-```
+- Make sure the video ID is correct
+- Leave empty (`""`) if you don't have a video yet
+- The video will be responsive and work on all devices
 
 ### 7. Contact Information
 

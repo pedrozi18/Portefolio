@@ -25,8 +25,8 @@ function loadPortfolioContent() {
     // Load skills
     loadSkills();
     
-    // Load projects
-    loadProjects();
+    // Load video
+    loadVideo();
     
     // Load contact info
     loadContactInfo();
@@ -59,35 +59,24 @@ function loadSkills() {
     });
 }
 
-function loadProjects() {
-    const projectsGrid = document.querySelector('.projects-grid');
-    projectsGrid.innerHTML = '';
+function loadVideo() {
+    const videoPlaceholder = document.getElementById('youtubeVideoPlaceholder');
+    const videoWrapper = document.querySelector('.video-wrapper');
     
-    portfolioContent.projects.forEach(project => {
-        const projectCard = document.createElement('article');
-        projectCard.className = 'project-card glass';
-        projectCard.innerHTML = `
-            <div class="project-image">
-                <img src="${project.image}" alt="${project.title}">
-                <div class="project-overlay">
-                    <a href="${project.demoLink}" class="project-link" aria-label="View Demo">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href="${project.githubLink}" class="project-link" aria-label="View Code">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-content">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <div class="project-tags">
-                    ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                </div>
-            </div>
-        `;
-        projectsGrid.appendChild(projectCard);
-    });
+    if (portfolioContent.featuredVideo.youtubeVideoId) {
+        // Create YouTube iframe if video ID is provided
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${portfolioContent.featuredVideo.youtubeVideoId}`;
+        iframe.title = portfolioContent.featuredVideo.title;
+        iframe.frameBorder = "0";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        
+        // Replace placeholder with iframe
+        videoWrapper.innerHTML = '';
+        videoWrapper.appendChild(iframe);
+    }
+    // If no video ID, the placeholder remains visible
 }
 
 function loadContactInfo() {
