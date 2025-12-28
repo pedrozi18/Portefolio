@@ -21,7 +21,7 @@ const portfolioContent = {
 
     // Social Media Links
     social: {
-        linkedin: "https://linkedin.com"
+        linkedin: "https://www.linkedin.com/in/pedro-louren%C3%A7o-8a980232b/"
     },
 
     // About Section
