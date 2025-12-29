@@ -118,33 +118,39 @@ skills: [
 
 ### 6. Featured Video
 
-Add your YouTube video to the portfolio:
+Add your own video file to the portfolio:
 
 ```javascript
 featuredVideo: {
-    youtubeVideoId: "dQw4w9WgXcQ",     // Your YouTube video ID
+    videoFile: "portfolio-video.mp4",      // Your video filename
     title: "My Featured Video",
-    description: "Description of your video"
+    description: "Description of your video",
+    posterImage: "video-thumbnail.jpg"     // Optional thumbnail image
 }
 ```
 
-**How to get your YouTube Video ID:**
-1. Go to your YouTube video
-2. Look at the URL - it will be like: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
-3. Copy the part after `v=` (in this example: `dQw4w9WgXcQ`)
-4. Paste it as the `youtubeVideoId` value
+**How to add your video:**
+1. Upload your video file (MP4, WebM, or OGG format) to the root directory of your repository
+2. Name it something descriptive (e.g., `portfolio-video.mp4`, `my-showcase.mp4`)
+3. Update the `videoFile` value in `content.js` with your filename
+4. (Optional) Add a poster/thumbnail image for before the video plays
 
 **Example:**
 ```javascript
 featuredVideo: {
-    youtubeVideoId: "abc123XYZ",
+    videoFile: "my-portfolio-showcase.mp4",
     title: "My Portfolio Showcase",
-    description: "Watch my latest project demonstration"
+    description: "Watch my latest project demonstration",
+    posterImage: "showcase-thumbnail.jpg"
 }
 ```
 
 **Tips:**
-- Make sure the video ID is correct
+- Recommended video format: MP4 (H.264) - best browser compatibility
+- Keep file size reasonable (under 50MB for faster loading)
+- Recommended resolution: 1080p (1920x1080) or 720p (1280x720)
+- The video player is responsive and supports all standard video controls
+- Leave `videoFile` empty (`""`) to show placeholder text
 - Leave empty (`""`) if you don't have a video yet
 - The video will be responsive and work on all devices
 

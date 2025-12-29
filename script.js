@@ -58,23 +58,35 @@ function loadSkills() {
 }
 
 function loadVideo() {
-    const videoPlaceholder = document.getElementById('youtubeVideoPlaceholder');
+    const videoPlaceholder = document.getElementById('videoPlaceholder');
     const videoWrapper = document.querySelector('.video-wrapper');
     
-    if (portfolioContent.featuredVideo.youtubeVideoId) {
-        // Create YouTube iframe if video ID is provided
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube.com/embed/${portfolioContent.featuredVideo.youtubeVideoId}`;
-        iframe.title = portfolioContent.featuredVideo.title;
-        iframe.frameBorder = "0";
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-        iframe.allowFullscreen = true;
+    if (portfolioContent.featuredVideo.videoFile) {
+        // Create HTML5 video element if video file is provided
+        const video = document.createElement('video');
+        video.controls = true;
+        video.className = 'featured-video';
         
-        // Replace placeholder with iframe
+        // Add poster image if provided
+        if (portfolioContent.featuredVideo.posterImage) {
+            video.poster = portfolioContent.featuredVideo.posterImage;
+        }
+        
+        // Add source element
+        const source = document.createElement('source');
+        source.src = portfolioContent.featuredVideo.videoFile;
+        source.type = `video/${portfolioContent.featuredVideo.videoFile.split('.').pop()}`;
+        
+        video.appendChild(source);
+        
+        // Add fallback text
+        video.innerHTML += 'Your browser does not support the video tag.';
+        
+        // Replace placeholder with video
         videoWrapper.innerHTML = '';
-        videoWrapper.appendChild(iframe);
+        videoWrapper.appendChild(video);
     }
-    // If no video ID, the placeholder remains visible
+    // If no video file, the placeholder remains visible
 }
 
 function loadContactInfo() {

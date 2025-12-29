@@ -51,18 +51,17 @@ const portfolioContent = {
         }
     ],
 
-    // Featured Video (YouTube)
+    // Featured Video (Local Video File)
     featuredVideo: {
-        // To add your YouTube video:
-        // 1. Go to your YouTube video
-        // 2. Click "Share" button
-        // 3. Copy the video ID (the part after "watch?v=" or "youtu.be/")
-        // 4. Paste it below
-        // Example: If URL is "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        // Then videoId is "dQw4w9WgXcQ"
-        youtubeVideoId: "", // Leave empty for now, add your video ID here later
+        // To add your video:
+        // 1. Upload your video file (MP4, WebM, or OGG) to the root directory
+        // 2. Name it something like "portfolio-video.mp4"
+        // 3. Update the videoFile path below
+        // Example: "portfolio-video.mp4" or "my-video.mp4"
+        videoFile: "", // Add your video filename here (e.g., "portfolio-video.mp4")
         title: "My Featured Video",
-        description: "Add your video description here"
+        description: "Add your video description here",
+        posterImage: "" // Optional: Add a poster/thumbnail image (e.g., "video-thumbnail.jpg")
     },
 
     // Contact Information
