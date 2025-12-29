@@ -58,7 +58,7 @@ const portfolioContent = {
         // 2. Name it something like "portfolio-video.mp4"
         // 3. Update the videoFile path below
         // Example: "portfolio-video.mp4" or "my-video.mp4"
-        videoFile: "", // Add your video filename here (e.g., "portfolio-video.mp4")
+        videoFile: "portfolio-video.mp4", // Add your video filename here (e.g., "portfolio-video.mp4")
         title: "My Featured Video",
         description: "Add your video description here",
         posterImage: "" // Optional: Add a poster/thumbnail image (e.g., "video-thumbnail.jpg")
